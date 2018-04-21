@@ -8,40 +8,37 @@ const THUMB_DOWN_COMMENT = 'THUMB_DOWN_COMMENT';
 
 function addComment(text) {
     return {
-        tyoe: ADD_COMMENT,
+        type: ADD_COMMENT,
         text,
         id: uuid.v4()
     }
 }
 
-function removeComment(text) {
+function removeComment(id) {
     return {
         type: REMOVE_COMMENT,
-        text,
-        id: uuid.v4()
+        id
     }
 }
 
-function editComponent(text) {
+function editComment(id, text) {
     return {
-        type: EDIT_COMPONRNT,
+        type: EDIT_COMMENT,
         text,
-        id: uuid.v4()
+        id
     }
 }
 
-function thumbUpComment(number) {
+function thumbUpComment(id) {
     return {
         type:THUMB_UP_COMMENT,
-        mumber,
-        id: uuid.v4()
+        id
     }
 }
 
-function thumbDownComment(number) {
+function thumbDownComment(id) {
     return {
         type: THUMB_DOWN_COMMENT,
-        number,
-        id: uuid.v4();
+        id
     }
 }
